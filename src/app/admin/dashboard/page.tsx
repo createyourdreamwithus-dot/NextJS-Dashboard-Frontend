@@ -1,9 +1,8 @@
 import Dashbaord from '@/Screens/Dashboard/Dashbaord'
 import React from 'react'
 
-type Props = {}
 
-const page = (props: Props) => {
+const page = () => {
   return (
     <div>
       <Dashbaord/>

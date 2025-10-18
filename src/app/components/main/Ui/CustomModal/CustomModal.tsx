@@ -1,8 +1,6 @@
 "use client";
-
 import React from "react";
-import { Modal } from "antd";
-import type { ModalProps } from "antd";
+import { Modal, ModalProps } from "antd";
 
 interface CustomModalProps extends ModalProps {
   title?: string;

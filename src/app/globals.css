@@ -5,21 +5,22 @@
 
 :root {
   --font-poppins: "Poppins", sans-serif;
-  --primary-color: #950edb;
+  --primary-color: #9a16ca;
+  --button-primary-color: #9a16ca;
   --sidebar-gradient: linear-gradient(135deg, #5a189a 0%, #1e0834 100%);
   --tab-gradient: linear-gradient(135deg, #950edb 0%, #7b2cbf 50%, #5a189a 100%);
 }
 
-/* Global Font */
+
 * { font-family: var(--font-poppins); }
 .ant-typography, .ant-btn, .ant-input, .ant-form-item-label, .ant-select {
   font-family: var(--font-poppins) !important;
 }
 
-/* Primary Button */
 .ant-btn-primary {
-  background: var(--primary-color) !important;
+  background: var(--button-primary-color) !important;
   border-color: var(--primary-color) !important;
+  
 }
 
 /* Sidebar Styles */
@@ -163,7 +164,6 @@
   margin: 0 !important;
 }
 
-/* Main Content */
 .main-content {
   margin: 24px !important;
   padding: 32px !important;
@@ -174,7 +174,6 @@
   min-height: calc(100vh - 140px) !important;
 }
 
-/* Custom Gradient Tabs */
 .custom-tabs {
   margin: 20px 0;
 }
@@ -243,13 +242,12 @@
   width: 100% !important;
 }
 
-/* Focus States */
 .custom-tabs .ant-tabs-tab:focus,
 .custom-tabs .ant-tabs-tab-btn:focus {
   outline: none !important;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .custom-header { padding: 0 16px !important; }
   .main-content { margin: 16px !important; padding: 20px !important; }
@@ -264,7 +262,6 @@
   }
 }
 
-/* Collapsed Sidebar */
 .ant-layout-sider-collapsed .brand-text { opacity: 0; }
 .ant-layout-sider-collapsed .custom-menu .ant-menu-item { text-align: center; }
 
@@ -278,4 +275,11 @@
     border-radius: 8px;
     padding: 6px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.css-dev-only-do-not-override-1odpy5d.ant-input-number-outlined {
+  width: 100%;
+}
+
+.css-dev-only-do-not-override-1odpy5d.ant-select-single {
+  width: 100%;
 }

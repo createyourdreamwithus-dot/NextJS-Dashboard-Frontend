@@ -22,14 +22,11 @@ const VerifyOtp: React.FC<VerifyOtpProps> = ({
   const [form] = Form.useForm();
 
   const handleFinish = (values: { otp: string }) => {
-    console.log("OTP form submitted:", values.otp);
     onSubmit(values.otp);
   };
 
   const handleOtpChange = (value: string) => {
-    console.log("OTP input changed:", value);
     if (value && value.length === 4) {
-      console.log("Auto-submitting OTP:", value);
       onSubmit(value);
     }
   };
@@ -42,7 +39,6 @@ const VerifyOtp: React.FC<VerifyOtpProps> = ({
   }, [counter]);
 
   const handleResend = () => {
-    console.log("Resending OTP");
     onResend();
     setCounter(60);
     form.resetFields();

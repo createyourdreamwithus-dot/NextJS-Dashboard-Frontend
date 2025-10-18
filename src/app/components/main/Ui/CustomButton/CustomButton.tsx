@@ -24,7 +24,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       shape={shape}
       size={size}
       icon={icon}
-      className={`rounded-lg font-medium ${className}`} 
+      className={`rounded-lg font-medium px-6 py-3 ${className}`} 
       {...rest}
     >
       {label}

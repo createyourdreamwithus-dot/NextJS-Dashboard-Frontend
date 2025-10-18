@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { poppins } from "./fonts/app.font";
+import { NotificationProvider } from './components/providers/NotificationProvider';
+import { ReactQueryProvider } from './components/providers/reactquery.provider';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,11 +16,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         <AntdRegistry>
+        <NotificationProvider>
+          <ReactQueryProvider>
             {children}
+            </ReactQueryProvider>
+
+            </NotificationProvider>
         </AntdRegistry>
       </body>
     </html>
